@@ -42,7 +42,7 @@ export default function Landing() {
             
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 animate-fade-in animation-delay-100">
               Turn Ideas Into
-              <span className="block">Execution Plans</span>
+              <span className="block text-primary">Execution Plans</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 animate-fade-in animation-delay-200">
