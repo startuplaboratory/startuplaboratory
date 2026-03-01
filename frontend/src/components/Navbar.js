@@ -30,7 +30,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
             <span className="font-heading font-semibold text-lg tracking-tight">
-              EXECUTION BLUEPRINT
+              STARTUP LABORATORY
             </span>
           </Link>
 
@@ -46,11 +46,11 @@ export const Navbar = () => {
               How it works
             </Link>
             <Link
-              to="/#framework"
+              to="/ideas"
               className={`text-sm font-medium transition-colors hover:text-foreground text-muted-foreground`}
-              data-testid="nav-framework"
+              data-testid="nav-ideas"
             >
-              Framework
+              Ideas
             </Link>
             <Link
               to="/about"

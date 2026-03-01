@@ -9,10 +9,10 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="font-heading font-semibold text-lg tracking-tight mb-3">
-              EXECUTION BLUEPRINT
+              STARTUP LABORATORY
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              A structured framework for evaluating startup ideas. 
+              The Startup for Startups. 
               Data-driven analysis, not emotional validation.
             </p>
           </div>
@@ -68,7 +68,7 @@ export const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Execution Blueprint. All rights reserved.
+            © {new Date().getFullYear()} Startup Laboratory. All rights reserved.
           </p>
         </div>
       </div>
