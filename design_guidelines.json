@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "persona": "E1",
+    "mission": "Create a 'Swiss-Analytical' aesthetic that feels like a physical blueprint: precise, objective, and calm.",
+    "principles": [
+      "Fusion: Swiss Poster Design x Architectural Blueprints.",
+      "Emotion: Calm Authority. The user should feel clarity, not hype.",
+      "Content: Data is the hero. Typography is the interface.",
+      "Contrast: High contrast text (Black on White), subtle structural borders.",
+      "Negative Space: Massive margins. Let the data breathe."
+    ]
+  },
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "IBM Plex Sans, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scaling": {
+        "h1": "text-5xl md:text-7xl font-medium tracking-tight leading-none",
+        "h2": "text-3xl md:text-5xl font-normal tracking-tight",
+        "h3": "text-xl md:text-2xl font-medium tracking-normal",
+        "body": "text-base leading-relaxed text-slate-600",
+        "label": "text-xs font-mono uppercase tracking-widest text-slate-500"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "background": "#FFFFFF",
+        "foreground": "#0F172A",
+        "card": "#FFFFFF",
+        "card_foreground": "#0F172A",
+        "popover": "#FFFFFF",
+        "popover_foreground": "#0F172A",
+        "primary": "#0F172A",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#F1F5F9",
+        "secondary_foreground": "#0F172A",
+        "muted": "#F8FAFC",
+        "muted_foreground": "#64748B",
+        "accent": "#F1F5F9",
+        "accent_foreground": "#0F172A",
+        "destructive": "#EF4444",
+        "destructive_foreground": "#FFFFFF",
+        "border": "#E2E8F0",
+        "input": "#E2E8F0",
+        "ring": "#0F172A",
+        "brand_accent": "#2563EB"
+      },
+      "usage": {
+        "brand_accent": "Use sparingly. Only for primary actions (Submit) or active states. NEVER for backgrounds.",
+        "borders": "Use #E2E8F0 for structural division. 1px solid.",
+        "backgrounds": "Pure White (#FFFFFF) for main surfaces. Slate-50 (#F8FAFC) for secondary sections."
+      }
+    },
+    "spacing": {
+      "scale": "Generous. Use p-8, p-12, p-16 for containers. Gap-6 or Gap-8 for grids.",
+      "radius": "rounded-none (0px) or rounded-sm (2px). NO large rounded corners."
+    },
+    "shadows": {
+      "strategy": "Flat design. Use borders for separation. No drop shadows unless absolutely necessary for overlays (then use shadow-sm)."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-8 rounded-none font-medium uppercase tracking-wide text-sm transition-all",
+      "secondary": "bg-white border border-input hover:bg-accent hover:text-accent-foreground h-10 px-8 rounded-none font-medium uppercase tracking-wide text-sm transition-all",
+      "ghost": "hover:bg-accent hover:text-accent-foreground rounded-none"
+    },
+    "cards": {
+      "style": "bg-card text-card-foreground border border-border rounded-none shadow-none p-6 or p-8",
+      "hover": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "style": "rounded-none border-input bg-transparent focus:ring-0 focus:border-primary h-12 text-base"
+    },
+    "navigation": {
+      "style": "border-b border-border bg-white/80 backdrop-blur-md sticky top-0 z-50"
+    }
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "type": "Bento Grid (Mode B)",
+      "grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border",
+      "item": "bg-white p-6 h-full"
+    },
+    "landing": {
+      "hero": "Split layout or Centered Typography. Massive H1. Minimal imagery.",
+      "features": "Grid of cards with visible borders (The 'Grid Borders' Surface Strategy)."
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1760467972730-d538f06920b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyYWwlMjBjb25jcmV0ZSUyMGdlb21ldHJ5fGVufDB8fHx8MTc3MjM1NTg2MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract concrete geometry for Hero section background (use with overlay)"
+      },
+      {
+        "category": "feature_abstract",
+        "url": "https://images.unsplash.com/photo-1760340769739-653d00200baf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyYWwlMjBjb25jcmV0ZSUyMGdlb21ldHJ5fGVufDB8fHx8MTc3MjM1NTg2MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Symmetrical concrete structure for 'Structure/Analysis' section"
+      },
+      {
+        "category": "about_workspace",
+        "url": "https://images.unsplash.com/photo-1752223638233-4c9545333f89?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd2hpdGUlMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDB8fHx8MTc3MjM1NTg2NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist workspace for 'About' or 'Process' section"
+      }
+    ],
+    "icons": "Use 'lucide-react' with stroke-width={1.5} for a thin, technical look."
+  },
+  "instructions_to_main_agent": [
+    "1. UPDATE TAILWIND CONFIG: Add the 'IBM Plex Sans' and 'Inter' fonts. Update the color palette to match the 'design_system.colors' section exactly.",
+    "2. GLOBAL CSS: Import the fonts in index.css. Set base styles to 'antialiased'.",
+    "3. SHADCN OVERRIDES: Go into /components/ui and REMOVE 'rounded-md' from all components. Replace with 'rounded-none' or 'rounded-sm'. Remove shadows from Cards.",
+    "4. LAYOUT: Build the Dashboard using the 'Bento Grid' strategy (gap-px bg-border) to create a grid-line effect.",
+    "5. TONE: Ensure all copy is directive and analytical. No exclamation marks.",
+    "6. DATA-TESTID: Add data-testid to all interactive elements."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid 'AI Slop': No generic gradients, no centered text blocks without structure.",
+    "Use 'sonner' for toasts.",
+    "Use 'lucide-react' for icons.",
+    "Components must use named exports.",
+    "Pages must use default exports."
+  ]
+}
