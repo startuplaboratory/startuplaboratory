@@ -29,7 +29,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
-            <FlaskConical className="h-5 w-5" />
+            <FlaskConical className="h-5 w-5 text-primary" />
             <span className="font-heading font-semibold tracking-tight">
               STARTUP LAB
             </span>
