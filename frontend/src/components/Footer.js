@@ -29,8 +29,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/#framework" className="text-sm hover:text-foreground transition-colors" data-testid="footer-framework">
-                  Framework
+                <Link to="/ideas" className="text-sm hover:text-foreground transition-colors" data-testid="footer-ideas">
+                  Ideas
                 </Link>
               </li>
               <li>
