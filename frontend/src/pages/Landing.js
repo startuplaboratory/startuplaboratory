@@ -123,8 +123,8 @@ export default function Landing() {
                 key={index} 
                 className="card-modern p-6 hover-lift"
               >
-                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-4">
-                  <item.icon className="h-5 w-5" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="h-5 w-5 text-primary" />
                 </div>
                 <span className="font-mono text-xs text-muted-foreground">{item.step}</span>
                 <h3 className="font-heading text-lg font-semibold mt-1 mb-2">
