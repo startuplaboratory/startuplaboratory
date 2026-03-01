@@ -595,7 +595,7 @@ async def signup(user_data: UserCreate):
         "password": hash_password(user_data.password),
         "full_name": user_data.full_name,
         "plan_type": "free",
-        "credits": 1,
+        "credits": 10,
         "total_submissions": 0,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "is_admin": False
@@ -1020,13 +1020,13 @@ async def shutdown_db_client():
 # Create admin user on startup
 @app.on_event("startup")
 async def create_admin_user():
-    admin_exists = await db.users.find_one({"email": "admin@executionblueprint.com"})
+    admin_exists = await db.users.find_one({"email": "admin@startuplaboratory.com"})
     if not admin_exists:
         admin_user = {
             "id": str(uuid.uuid4()),
-            "email": "admin@executionblueprint.com",
-            "password": hash_password("admin123"),
-            "full_name": "Admin User",
+            "email": "admin@startuplaboratory.com",
+            "password": hash_password("labadmin2024"),
+            "full_name": "Lab Admin",
             "plan_type": "admin",
             "credits": 999,
             "total_submissions": 0,
@@ -1034,4 +1034,4 @@ async def create_admin_user():
             "is_admin": True
         }
         await db.users.insert_one(admin_user)
-        logger.info("Admin user created: admin@executionblueprint.com / admin123")
+        logger.info("Admin user created: admin@startuplaboratory.com / labadmin2024")
