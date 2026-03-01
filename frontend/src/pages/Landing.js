@@ -34,7 +34,7 @@ export default function Landing() {
       <section className="relative py-20 lg:py-32 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label-mono mb-4 animate-fade-in">Startup Validation Framework</p>
+            <p className="label-mono mb-4 animate-fade-in">The Startup for Startups</p>
             <h1 className="font-heading text-5xl md:text-7xl font-medium tracking-tight leading-none mb-6 animate-fade-in animation-delay-100">
               From Idea to<br />
               <span className="text-brand">Execution Blueprint</span>
