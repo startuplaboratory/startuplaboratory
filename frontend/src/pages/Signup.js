@@ -52,7 +52,7 @@ export default function Signup() {
               Create your account
             </h1>
             <p className="text-muted-foreground mt-2">
-              Start with 1 free analysis credit.
+              Start with <span className="font-semibold text-violet-600">10 free credits</span>. No card required.
             </p>
           </div>
 
