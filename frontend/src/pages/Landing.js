@@ -166,7 +166,7 @@ export default function Landing() {
                 className="p-5 border border-border rounded-lg hover:border-foreground/20 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <pillar.icon className="h-5 w-5 text-muted-foreground" />
+                  <pillar.icon className="h-5 w-5 text-primary" />
                   <span className="font-mono text-xs text-muted-foreground">{pillar.points}</span>
                 </div>
                 <h3 className="font-heading font-semibold mb-1">{pillar.title}</h3>
