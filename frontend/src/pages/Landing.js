@@ -161,26 +161,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="border-y border-border bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '2,500+', label: 'Ideas Analyzed', icon: Target },
-              { value: '87%', label: 'Success Rate', icon: Award },
-              { value: '30 Days', label: 'Action Plans', icon: Calendar },
-              { value: '10K+', label: 'Founders Trust Us', icon: Users },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <stat.icon className="h-6 w-6 mx-auto mb-3 text-violet-500" />
-                <p className="text-3xl md:text-4xl font-heading font-bold">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* How It Works */}
       <section id="how-it-works" className="section-padding mesh-gradient">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
