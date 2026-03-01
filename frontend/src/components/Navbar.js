@@ -24,15 +24,13 @@ export const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="glass border-b border-border/50 sticky top-0 z-50">
+    <header className="glass border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-              <FlaskConical className="h-4 w-4 text-white" />
-            </div>
-            <span className="font-heading font-bold text-lg tracking-tight">
+            <FlaskConical className="h-5 w-5" />
+            <span className="font-heading font-semibold tracking-tight">
               STARTUP LAB
             </span>
           </Link>
@@ -41,7 +39,7 @@ export const Navbar = () => {
           <nav className="hidden md:flex items-center gap-8">
             <Link
               to="/#how-it-works"
-              className={`text-sm font-medium transition-colors hover:text-violet-600 ${
+              className={`text-sm font-medium transition-colors hover:text-foreground ${
                 isActive('/') ? 'text-foreground' : 'text-muted-foreground'
               }`}
               data-testid="nav-how-it-works"
@@ -50,8 +48,8 @@ export const Navbar = () => {
             </Link>
             <Link
               to="/ideas"
-              className={`text-sm font-medium transition-colors hover:text-violet-600 ${
-                isActive('/ideas') ? 'text-violet-600' : 'text-muted-foreground'
+              className={`text-sm font-medium transition-colors hover:text-foreground ${
+                isActive('/ideas') ? 'text-foreground' : 'text-muted-foreground'
               }`}
               data-testid="nav-ideas"
             >
@@ -59,7 +57,7 @@ export const Navbar = () => {
             </Link>
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors hover:text-violet-600 ${
+              className={`text-sm font-medium transition-colors hover:text-foreground ${
                 isActive('/about') ? 'text-foreground' : 'text-muted-foreground'
               }`}
               data-testid="nav-about"
@@ -69,12 +67,12 @@ export const Navbar = () => {
           </nav>
 
           {/* Auth */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {user ? (
               <>
                 <Link to="/dashboard">
                   <Button 
-                    className="btn-gradient h-10 px-5 rounded-full text-sm"
+                    className="h-9 px-4 text-sm rounded-lg"
                     data-testid="nav-start-analysis"
                   >
                     Dashboard
@@ -83,21 +81,17 @@ export const Navbar = () => {
                 </Link>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full" data-testid="user-menu-trigger">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium">
+                    <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full" data-testid="user-menu-trigger">
+                      <div className="w-7 h-7 rounded-full bg-foreground flex items-center justify-center text-background text-xs font-medium">
                         {user.full_name?.charAt(0) || 'U'}
                       </div>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56 rounded-xl">
+                  <DropdownMenuContent align="end" className="w-52 rounded-lg">
                     <div className="px-3 py-2">
                       <p className="text-sm font-medium">{user.full_name}</p>
                       <p className="text-xs text-muted-foreground">{user.email}</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <span className="text-xs font-mono bg-violet-100 text-violet-700 px-2 py-0.5 rounded">
-                          {user.credits} credits
-                        </span>
-                      </div>
+                      <p className="text-xs text-muted-foreground mt-1">{user.credits} credits</p>
                     </div>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={() => navigate('/dashboard')} data-testid="menu-dashboard">
@@ -111,7 +105,7 @@ export const Navbar = () => {
                       </DropdownMenuItem>
                     )}
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleLogout} data-testid="menu-logout" className="text-red-600">
+                    <DropdownMenuItem onClick={handleLogout} data-testid="menu-logout">
                       <LogOut className="mr-2 h-4 w-4" />
                       Log out
                     </DropdownMenuItem>
@@ -123,7 +117,7 @@ export const Navbar = () => {
                 <Link to="/login">
                   <Button 
                     variant="ghost" 
-                    className="h-10 px-5 text-sm font-medium rounded-full"
+                    className="h-9 px-4 text-sm rounded-lg"
                     data-testid="nav-login"
                   >
                     Log in
@@ -131,11 +125,10 @@ export const Navbar = () => {
                 </Link>
                 <Link to="/signup">
                   <Button 
-                    className="btn-gradient h-10 px-5 rounded-full text-sm"
+                    className="h-9 px-4 text-sm rounded-lg"
                     data-testid="nav-start-analysis-guest"
                   >
                     Get Started
-                    <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </Link>
               </>
