@@ -86,7 +86,7 @@ export default function Login() {
 
             <Button 
               type="submit" 
-              className="w-full h-12 uppercase tracking-wide text-sm font-medium"
+              className="w-full h-12 btn-gradient rounded-full text-sm font-medium"
               disabled={loading}
               data-testid="login-submit"
             >
